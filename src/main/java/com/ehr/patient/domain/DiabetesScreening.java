@@ -16,8 +16,6 @@ public class DiabetesScreening implements Serializable  {
     @GeneratedValue
     private Long id;
 
-    private Boolean onTreatment;
-
     @ManyToOne
     @JoinColumn(name="patientHts", nullable=false)
     private PatientHts patientHts;
@@ -43,13 +41,6 @@ public class DiabetesScreening implements Serializable  {
         this.id = id;
     }
 
-    public Boolean getOnTreatment() {
-        return onTreatment;
-    }
-
-    public void setOnTreatment(Boolean onTreatment) {
-        this.onTreatment = onTreatment;
-    }
 
     public PatientHts getPatientHts() {
         return patientHts;
